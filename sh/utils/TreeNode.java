@@ -1,11 +1,11 @@
 package src.sh.utils;
 
 public class TreeNode {
-    public Integer val;
+    public int val;
     public TreeNode left;
     public TreeNode right;
 
-    TreeNode() {
+    public TreeNode() {
     }
 
     public TreeNode(int val) {

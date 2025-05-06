@@ -25,5 +25,4 @@ public class SelectionSort {
 
         Arrays.stream(nums).forEach(System.out::println);
     }
-
 }
