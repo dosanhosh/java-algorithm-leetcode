@@ -1,4 +1,4 @@
-package src.sh.leetcode.algorithm.binary;
+package src.sh.leetcode.algorithm.binary.tree;
 
 import src.sh.utils.TreeNode;
 

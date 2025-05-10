@@ -54,9 +54,10 @@ public class ReverseLinkedListII {
 
         // node = left
         ListNode cur = prev.next;
-        // 1 2 3 4 5
-        // 1 3 2 4 5
-        // 1 4 3 2 4
+        // 1 2 3 4 5 6
+        // 1 3 2 4 5 6
+        // 1 4 3 2 5 6
+        // 1 5 4 3 2 6
         for (int i = 0; i < right - left; i++) {
             ListNode temp = cur.next;
             cur.next = temp.next;
@@ -70,7 +71,7 @@ public class ReverseLinkedListII {
         ListNode listNode = new ListNode(1);
         listNode.next = new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5, new ListNode(6)))));
 
-        listNode = reverseBetween(listNode, 2, 4);
+        listNode = reverseBetween(listNode, 2, 5);
         while (listNode != null) {
             System.out.println(listNode.val);
             listNode = listNode.next;
