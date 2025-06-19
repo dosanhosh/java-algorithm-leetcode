@@ -6,4 +6,5 @@ import org.springframework.stereotype.Service;
 @Service
 public interface PaymentService {
     void process(PaymentRequest paymentRequest) throws Exception;
+    void notify(PaymentRequest paymentRequest) throws Exception;
 }

@@ -20,6 +20,7 @@ public class PaymentController {
     @PostMapping
     public ResponseEntity<?> payment(@RequestBody PaymentRequest paymentRequest) throws Exception {
         paymentService.process(paymentRequest);
+        paymentService.notify(paymentRequest);
         return ResponseEntity.ok().build();
     }
 
