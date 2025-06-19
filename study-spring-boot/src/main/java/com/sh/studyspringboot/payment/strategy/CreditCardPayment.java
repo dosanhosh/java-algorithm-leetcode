@@ -4,9 +4,14 @@ import com.sh.studyspringboot.payment.model.PaymentRequest;
 import org.springframework.stereotype.Component;
 
 @Component
-public class CreditCardPayment implements PaymentStrategy {
+public class CreditCardPayment extends PaymentTemplate implements PaymentStrategy {
     @Override
     public void pay(PaymentRequest paymentRequest) {
         System.out.println(this.getClass() + ":" + paymentRequest.toString());
+    }
+
+    @Override
+    protected void processPayment(PaymentRequest rq) {
+       this.pay(rq);
     }
 }

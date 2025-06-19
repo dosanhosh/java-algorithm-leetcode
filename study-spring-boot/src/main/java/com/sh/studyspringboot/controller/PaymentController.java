@@ -24,4 +24,10 @@ public class PaymentController {
         return ResponseEntity.ok().build();
     }
 
+    @PostMapping("/v2")
+    public ResponseEntity<?> paymentv2(@RequestBody PaymentRequest paymentRequest) throws Exception {
+        paymentService.process(paymentRequest);
+        return ResponseEntity.ok().build();
+    }
+
 }

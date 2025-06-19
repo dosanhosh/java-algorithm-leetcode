@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class NotifyWarehouseListener {
 
-
     @EventListener
     public void notifyWarehouse(UserPaymentEvent event) {
         System.out.println("NotifyWarehouseListener:" + event.getPaymentRequest().toString());
